@@ -1,0 +1,46 @@
+2014-10-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/foaas.R: Added yoda(), ballmer(), what(), because() and
+	caniuse() which are now active at http://foaas.com
+
+	* man/rfoaas-package.Rd: Updated accordingly
+
+2014-10-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.0.4 (corresponding to FOAAS API 0.0.4)
+
+	* R/foaas.R: Added version() and operations() meta accessors
+
+	* man/rfoaas-package.Rd: Updated to API 0.0.4, and expanded with
+	examples section
+
+2014-10-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/foaas.R: Activated madison(), added cool(), field() and nugget()
+	now that http://foaas.com has been expanded again
+
+2014-02-14 Dason Kurkiewicz  <dasonk@iastate.edu>
+
+        * R/foass.R: Fixed parameter list for pink so it actually works.
+
+2014-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+        * R/foaas.R: New accessor function madison(name, from) but
+        commented out as the backend does not seem to supply it
+
+2013-08-07  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION: Version 0.0.2
+
+        * R/foaas.R: New accessor function fascinating(from)
+
+2013-07-26  Dirk Eddelbuettel  <edd@debian.org>
+
+        * R/foaas.R (flying): New accessor function flying(from)
+
+        * man/rfoaas-package.Rd: Documentation for flying(from)
+
+2013-07-20  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION: Initial version 0.0.1 on fresh github repo
+
