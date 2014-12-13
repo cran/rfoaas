@@ -17,7 +17,6 @@
 \alias{life}
 \alias{chainsaw}
 \alias{outside}
-\alias{thing}
 \alias{thanks}
 \alias{flying}
 \alias{fascinating}
@@ -30,6 +29,10 @@
 \alias{what}
 \alias{because}
 \alias{caniuse}
+\alias{bye}
+\alias{diabetes}
+\alias{bus}
+\alias{thing}
 \docType{package}
 \title{R Interface to FOAAS}
 \description{
@@ -51,7 +54,6 @@
   life(name)
   chainsaw(name, from)
   outside(name, from)
-  thing(name, from)
   thanks(from)
   fascinating(from)
   madison(name, from)
@@ -63,6 +65,10 @@
   what(from)
   because(from)
   caniuse(tool, from)
+  bye(from)
+  diabetes(from)
+  bus(from)
+  thing(name, from)
 
   version()
   operations()
@@ -100,8 +106,16 @@
 \author{Dirk Eddelbuettel}
 \examples{
 \dontrun{                   # as we need a needwork connection
-version()                   # returns current API version
-madison("Billy", "Eric")    # example 'madison' API accessor
+
+    ## returns current API version
+    version()
+
+    ## example 'madison' accessor in API
+    madison("Billy", "Eric")
+
+    ## operations() returns JSON object listing the accessible functionality
+    if (require(jsonline)) print(fromJSON(operations()))
+
 }
 }
 \keyword{package}
