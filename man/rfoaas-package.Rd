@@ -32,6 +32,7 @@
 \alias{bye}
 \alias{diabetes}
 \alias{bus}
+\alias{xmas}
 \alias{thing}
 \docType{package}
 \title{R Interface to FOAAS}
@@ -69,6 +70,7 @@
   diabetes(from)
   bus(from)
   thing(name, from)
+  xmas(name, from)
 
   version()
   operations()
@@ -91,11 +93,10 @@
   JSON parsers implementing a \code{fromJSON()} method is recommended to
   convert it into a native R object.
 
-  On the Windows operating system, UTF-8 encoding may need to be set
-  explicitly when a character set containing characters requiring it is
-  returned.  Currently only the \code{linus()} functions does this from
-  the server side, though result sets may of course contain other
-  encodings if the user supplied values did. 
+  Return values are set to the UTF-8 encoding as the FOAAS service
+  defaults using UTF-8 strings. Anectodatally, this seems to help only
+  on the Windows operating system as the other already handled UTF-8
+  correctly. 
 }
 \details{
   The \code{operations()} query returns a JSON object describing the
@@ -126,10 +127,6 @@
 
     ## operations() returns JSON object listing the accessible functionality
     if (require(jsonline)) print(fromJSON(operations()))
-
-    ## example 'linus' result in UTF-8
-    res <- madison("Billy", "Eric")
-    Encoding(res) <- "UTF-8"    ## needed on Windows 
 
 }
 }

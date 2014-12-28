@@ -1,6 +1,6 @@
-5cf54cbf7d0475cf799bdd85cfc33b4e *ChangeLog
-79e802b61257dfc7ce977f1a2c3ad2d8 *DESCRIPTION
+0f2ae63eca9e910701505aaf069dc86c *ChangeLog
+993b542d66858e5c8ebf92be24993814 *DESCRIPTION
 8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
-b670b0d5e9384778c1235c3b1715aa15 *R/foaas.R
+ad0a2a13cf77e74ff75f116dfd4450da *R/foaas.R
 9fb6f368e8929521d93e5f12af38867d *README.md
-999803526e3f0dcd8efe80af4fa4fe8f *man/rfoaas-package.Rd
+999aea6149530ca7dc02cbd1396ebd28 *man/rfoaas-package.Rd
