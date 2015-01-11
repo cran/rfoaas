@@ -18,12 +18,23 @@
 ##  along with rfoaas.  If not, see <http://www.gnu.org/licenses/>.
 
 .foaas <- function(..., n=1) {
-    req <- URLencode(paste(..., sep="/"))     	         	# collate arguments and encode
-    con <- url(paste0("http://foaas.herokuapp.com/", req)) 	# form url and create connection
-    res <- readLines(con, n=n, warn=FALSE)       		# read one line from connection
-    close(con)                                                  # clean connection
-    Encoding(res) <- "UTF-8"    				# server-side is UTF-8, needed on Windows 
-    res
+
+    ## -- The following used to work when foaas.com was running with text/plain in default
+    ##
+    #req <- URLencode(paste(..., sep="/"))     	         	# collate arguments and encode
+    #con <- url(paste0("http://foaas.herokuapp.com/", req)) 	# form url and create connection
+    #res <- readLines(con, n=n, warn=FALSE)       		# read one line from connection
+    #close(con)                                                 # clean connection
+    #Encoding(res) <- "UTF-8"    				# server-side is UTF-8, needed on Windows 
+    #res
+    ##
+    ## -- but now we have to explicitly request it via accept headers, so we need http::GET
+    
+    srv <- "http://foaas.herokuapp.com"
+    req <- URLencode(paste(srv, ..., sep="/"))     	        # collate arguments and encode
+    res <- GET(req, accept("text/plain"))
+    txt <- content(res, "text", encoding="utf-8")
+    txt
 }
 
 .from <- function() {
@@ -67,7 +78,6 @@ because     <- function(from=.from())          { .foaas("because", from) }
 caniuse     <- function(tool, from=.from())    { .foaas("caniuse", tool, from) }
 bye         <- function(from=.from())          { .foaas("bye", from) }
 diabetes    <- function(from=.from())          { .foaas("diabetes", from) }
-bus         <- function(from=.from())          { .foaas("bus", from) }
 bus         <- function(from=.from())          { .foaas("bus", from) }
 xmas        <- function(name, from=.from())    { .foaas("xmas", name, from) }
 ## catch-all 
