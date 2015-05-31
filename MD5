@@ -1,7 +1,7 @@
-88be00dbde371dce3cf7015986351c61 *ChangeLog
-f5cb87a6c3d425770ee6fb414a13c158 *DESCRIPTION
+0f3a7e3648daf61d9e115cb8f13e363f *ChangeLog
+def0c10197cf998ba452ea436e93cfd8 *DESCRIPTION
 206e8465f72841159c5a3a1287244bd6 *NAMESPACE
-28ee739b0c610cfb55adec0fecdf052a *R/foaas.R
-08a3f9e9efa1f10f365d53fafba38cd7 *README.md
-67ced4bc2f544444058885e2fd7a3533 *man/rfoaas-package.Rd
-a0828b76ae45a5c69835e1a1d1bba6d3 *tests/runTestsAgainstFOAAS.R
+a35fe15b5e4e2eef63e1396652bf62f9 *R/foaas.R
+ae314476b48e82882cb65d3363bef479 *README.md
+0c5678cab545da1892b4b40a55250e2f *man/rfoaas-package.Rd
+367e008365a2b4aca9e78e3bfe8c2645 *tests/runTestsAgainstFOAAS.R
