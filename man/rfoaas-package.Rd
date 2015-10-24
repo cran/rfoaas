@@ -36,6 +36,15 @@
 \alias{awesome}
 \alias{tucker}
 \alias{bucket}
+\alias{bday}
+\alias{family_}
+\alias{shutup}
+\alias{zayn}
+\alias{dalton}
+\alias{dosomething}
+%\alias{off_with}
+\alias{retard}
+\alias{thumbs}
 \alias{thing}
 \docType{package}
 \title{R Interface to FOAAS}
@@ -76,6 +85,15 @@
   awesome(from, filter, language)
   tucker(from, filter, language)
   bucket(from, filter, language)
+  bday(name, from, filter, language)
+  family_(from, filter, language)
+  shutup(name, from, filter, language)
+  zayn(from, filter, language)
+  dalton(name, from, filter, language)
+  dosomething(do, something, from, filter, language)
+%  off_with(behaviour, from, filter, language)
+  retard(from, filter, language)
+  thumbs(name, from, filter, language)
 
   thing(name, from, filter, language)
 
@@ -97,9 +115,12 @@
   internationalized to the given (optional) language stated as the the
   usual two-character code such as \sQuote{fr}, \sQuote{de},
   \sQuote{es}}. 
-  \item{reference}{An additional reference in the message.}
-  \item{company}{A company reference in the message.}
-  \item{tool}{A company reference in the message.}
+  \item{reference}{An additional referenced in the message.}
+  \item{company}{A company referenced in the message.}
+  \item{tool}{A company referenced in the message.}
+  \item{do}{A activity referenced in the message.}
+  \item{something}{An object referenced in the message.}
+  
 }
 \value{
   For all (but one) queries, a text string with the request FOAAS

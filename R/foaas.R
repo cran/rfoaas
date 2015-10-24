@@ -46,7 +46,6 @@
     }
 
     req <- URLencode(req)					# encode as a URL just in case
-    
     res <- GET(req, accept("text/plain"))
     txt <- content(res, "text", encoding="utf-8")
     txt
@@ -107,7 +106,21 @@ xmas        <- function(name, from=.from(), filter=.filter(), language=.language
 awesome     <- function(from=.from(), filter=.filter(), language=.language())                      { .foaas("awesome", from, filter=filter, language=language) }
 tucker      <- function(from=.from(), filter=.filter(), language=.language())                      { .foaas("tucker", from, filter=filter, language=language) }
 bucket      <- function(from=.from(), filter=.filter(), language=.language())                      { .foaas("bucket", from, filter=filter, language=language) }
+bday        <- function(name, from=.from(), filter=.filter(), language=.language())                { .foaas("bday", name, from, filter=filter, language=language) }
+family_     <- function(from=.from(), filter=.filter(), language=.language())                      { .foaas("family", from, filter=filter, language=language) }
+shutup      <- function(name, from=.from(), filter=.filter(), language=.language())                { .foaas("shutup", name, from, filter=filter, language=language) }
+zayn        <- function(from=.from(), filter=.filter(), language=.language())                      { .foaas("zayn", from, filter=filter, language=language) }
+dalton      <- function(name, from=.from(), filter=.filter(), language=.language())                { .foaas("dalton", name, from, filter=filter, language=language) }
+dosomething <- function(do, something, from=.from(), filter=.filter(), language=.language())       { .foaas("dosomething", do, something, from, filter=filter, language=language) }
+#off_with    <- function(behaviour, from=.from(), filter=.filter(), language=.language())           { .foaas("off_with", behaviour, from, filter=filter, language=language) }
+retard      <- function(from=.from(), filter=.filter(), language=.language())                      { .foaas("retard", from, filter=filter, language=language) }
+thumbs      <- function(name, from=.from(), filter=.filter(), language=.language())                { .foaas("thumbs", name, from, filter=filter, language=language) }
 
 ## catch-all 
 thing       <- function(name, from=.from(), filter=.filter(), language=.language())                { .foaas(name, from, filter=filter, language=language) }
+
+
+
+
+
 
