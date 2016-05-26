@@ -1,4 +1,38 @@
+2016-05-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version): Release 0.1.9
+
+	* README.md: Use canonical CRAN URL
+
+2016-05-25  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/foaas.R (.foaas): Return object is now of class 'rfoaas'
+	* R/foaas.R (print.rfoaas): Added print method
+	* man/rfoaas-package.Rd: Define print method
+	* NAMESPACE: Register print method
+
+2016-05-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/foaas.R: Added greed(), me() and mornin()
+	* man/foaas.Rd: Documented new functions; corrected some formatting
+	and one typo
+	* tests/runTestsAgainstFOAAS.R: Added tests
+
+	* rfoaas.Rproj: Added
+	* .gitignore: Ditto
+	* .Rbuildignore: Updated
+
+2015-10-25  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version): Release 0.1.8.1
+
+	* R/foaas.R: Add keepcalm()
+	* man/foaas.Rd: Document keepcalm()
+	* tests/runTestsAgainstFOAAS.R: Test keepcalm()
+
 2015-10-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date): Release 0.1.8
 
 	* R/foaas.R (zayn): Corrected arguments
 
@@ -13,7 +47,6 @@
 
 	* R/foaas.R (dalton): New function
 	* R/foaas.R (dosomething): New function
-	* R/foaas.R (off_with): New function
 	* R/foaas.R (retard): New function
 	* R/foaas.R (thumbs): New function
 

@@ -44,6 +44,7 @@ if (runTests) {
     tool      <- "Some magic thing"
     do        <- "Get"
     something <- "Something"
+    reaction  <- "do not panic"
 
     ## basic operations
     stopifnot(off         (name=name, from=from)  == "Fuck off, Someone. - Me") 
@@ -88,22 +89,30 @@ if (runTests) {
     stopifnot(family_     (from=from)             == "Fuck you, your whole family, your pets, and your feces. - Me")
     stopifnot(shutup      (name=name, from=from)  == "Someone, shut the fuck up. - Me")
     stopifnot(zayn        (from=from)             == "Ask me if I give a motherfuck ?!! - Me")
+    stopifnot(keepcalm    (reaction=reaction,
+                           from=from)             == "Keep the fuck calm and do not panic! - Me")
     stopifnot(dalton      (name=name, from=from)  == "Someone: A fucking problem solving super-hero. - Me")
     stopifnot(dosomething (do=do, something=something,
                            from=from)             == "Get the fucking Something! - Me")
     ##off_with
     stopifnot(retard      (from=from)             == "You Fucktard! - Me")
     stopifnot(thumbs      (name=name, from=from)  == "Who has two thumbs and doesn't give a fuck? Someone. - Me")
+    stopifnot(greed       (something=something,
+                           from=from)             == "The point is, ladies and gentleman, that something -- for lack of a better word -- is good. Something is right. Something works. Something clarifies, cuts through, and captures the essence of the evolutionary spirit. Something, in all of its forms -- Something for life, for money, for love, knowledge -- has marked the upward surge of mankind. - Me")
+
+    stopifnot(me          (from=from)             == "Fuck me. - Me")
+    stopifnot(mornin      (from=from)             == "Happy fuckin' Mornin'! - Me")
+
     stopifnot(thing       (name=name, from=from)  == "Fuck Someone. - Me")
     
     ## shoutcloud
     stopifnot(off         (name=name, from=from, filter="shoutcloud")  == "FUCK OFF, SOMEONE. - ME") 
 
     ## language
-    #stopifnot(off         (name=name, from=from, language="de")  == "Verpiss dich, jemand. - Me")
+    #stopifnot(off         (name=name, from=from, language="de")  == ""Fuck off jemand. - Me")
     
     ## shoutcloud and language
-    #stopifnot(off         (name=name, from=from, filter="shoutcloud", language="de")  == "VERPISS DICH, JEMAND. - ME")
+    stopifnot(off         (name=name, from=from, filter="shoutcloud", language="de")  == "FUCK OFF JEMAND. - ME")
     
 }
 

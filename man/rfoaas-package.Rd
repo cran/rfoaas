@@ -1,6 +1,7 @@
 \name{rfoaas-package}
 \alias{rfoaas-package}
 \alias{rfoaas}
+\alias{print.rfoaas}
 \alias{version}
 \alias{operations}
 \alias{off}
@@ -40,17 +41,21 @@
 \alias{family_}
 \alias{shutup}
 \alias{zayn}
+\alias{keepcalm}
 \alias{dalton}
 \alias{dosomething}
 %\alias{off_with}
 \alias{retard}
 \alias{thumbs}
+\alias{greed}
+\alias{me}
+\alias{mornin}
 \alias{thing}
 \docType{package}
 \title{R Interface to FOAAS}
 \description{
   The FOAAS service is provided as a modern, RESTful, scalable
-  solution. This packge provides an R interface.
+  solution. This package provides an R interface.
 }
 \usage{
   off(name, from, filter, language)
@@ -89,23 +94,30 @@
   family_(from, filter, language)
   shutup(name, from, filter, language)
   zayn(from, filter, language)
+  keepcalm(reaction, from, filter, language)
   dalton(name, from, filter, language)
   dosomething(do, something, from, filter, language)
 %  off_with(behaviour, from, filter, language)
   retard(from, filter, language)
   thumbs(name, from, filter, language)
+  greed(something, from, filter, language)
+  me(from, filter, language)
+  mornin(from, filter, language)
 
   thing(name, from, filter, language)
 
   version()
   operations()
+
+  \method{print}{rfoaas}(x, width = NULL, ...)
+
 }
 \arguments{
   \item{name}{The name to whom the message is directed.}
   \item{from}{The name of the message requester. If omitted, the value
   of the (optional) global variable \sQuote{rfoaasFrom} is used, and if
   that variable is missing or unset, a default is filled-in based on the
-  user name obtained via \code{\link{Sys.info}}}. 
+  user name obtained via \code{\link{Sys.info}}.}
   \item{filter}{An optional filter. If unset, the (optional) global
   variable \sQuote{rfoaasFilter} can provide a default, and a fallback
   value of \sQuote{none}. Currently the only other permitted value is
@@ -114,13 +126,17 @@
   \item{language}{An optional filter argument. If set, the message is
   internationalized to the given (optional) language stated as the the
   usual two-character code such as \sQuote{fr}, \sQuote{de},
-  \sQuote{es}}. 
+  \sQuote{es}.} 
   \item{reference}{An additional referenced in the message.}
   \item{company}{A company referenced in the message.}
   \item{tool}{A company referenced in the message.}
   \item{do}{A activity referenced in the message.}
   \item{something}{An object referenced in the message.}
-  
+  \item{reaction}{An activity referenced in the message.}
+
+  \item{x}{Default object for \code{print} method}
+  \item{width}{Optional column width parameter}
+  \item{...}{Other optional arguments}
 }
 \value{
   For all (but one) queries, a text string with the request FOAAS
