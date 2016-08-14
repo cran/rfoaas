@@ -47,10 +47,25 @@
 %\alias{off_with}
 \alias{retard}
 \alias{thumbs}
+\alias{back}
+\alias{bm}
+\alias{gfy}
 \alias{greed}
 \alias{me}
 \alias{mornin}
+\alias{think}
+\alias{keep}
+\alias{single_}
+\alias{look}
+\alias{looking}
+\alias{no}
+\alias{give}
+\alias{zero}
+\alias{pulp}
+\alias{sake}
+\alias{anyway}
 \alias{thing}
+\alias{getRandomFO}
 \docType{package}
 \title{R Interface to FOAAS}
 \description{
@@ -100,11 +115,26 @@
 %  off_with(behaviour, from, filter, language)
   retard(from, filter, language)
   thumbs(name, from, filter, language)
+  back(name, from, filter, language)
+  bm(name, from, filter, language)
+  gfy(name, from, filter, language)
   greed(something, from, filter, language)
   me(from, filter, language)
   mornin(from, filter, language)
+  think(name, from, filter, language)
+  keep(name, from, filter, language)
+  single_(from, filter, language)
+  look(name, from, filter, language)
+  looking(from, filter, language)
+  no(from, filter, language)
+  give(from, filter, language)
+  zero(from, filter, language)
+  pulp(name, from, filter, language)
+  sake(from, filter, language)
+  anyway(name, from, filter, language)
 
   thing(name, from, filter, language)
+  getRandomFO(name, from, filter, language)
 
   version()
   operations()
@@ -115,18 +145,18 @@
 \arguments{
   \item{name}{The name to whom the message is directed.}
   \item{from}{The name of the message requester. If omitted, the value
-  of the (optional) global variable \sQuote{rfoaasFrom} is used, and if
-  that variable is missing or unset, a default is filled-in based on the
-  user name obtained via \code{\link{Sys.info}}.}
+    of the (optional) global variable \sQuote{rfoaasFrom} is used, and if
+    that variable is missing or unset, a default is filled-in based on the
+    user name obtained via \code{\link{Sys.info}}.}
   \item{filter}{An optional filter. If unset, the (optional) global
-  variable \sQuote{rfoaasFilter} can provide a default, and a fallback
-  value of \sQuote{none}. Currently the only other permitted value is
-  \sQuote{shoutcloud} to enable filtering via the magnificient
-  \url{http://shoutcloud.io} service.}
+    variable \sQuote{rfoaasFilter} can provide a default, and a fallback
+    value of \sQuote{none}. Currently the only other permitted value is
+    \sQuote{shoutcloud} to enable filtering via the magnificient
+    \url{http://shoutcloud.io} service.}
   \item{language}{An optional filter argument. If set, the message is
-  internationalized to the given (optional) language stated as the the
-  usual two-character code such as \sQuote{fr}, \sQuote{de},
-  \sQuote{es}.} 
+    internationalized to the given (optional) language stated as the the
+    usual two-character code such as \sQuote{fr}, \sQuote{de},
+    \sQuote{es}.}
   \item{reference}{An additional referenced in the message.}
   \item{company}{A company referenced in the message.}
   \item{tool}{A company referenced in the message.}
@@ -140,7 +170,7 @@
 }
 \value{
   For all (but one) queries, a text string with the request FOAAS
-  message is returned. 
+  message is returned.
 
   The exception is the very last query listed: \code{operations()}
   returns a JSON object describing all queries currently supported by
@@ -152,7 +182,7 @@
   Return values are set to the UTF-8 encoding as the FOAAS service
   defaults using UTF-8 strings. Anectodatally, this seems to help only
   on the Windows operating system as the other already handled UTF-8
-  correctly. 
+  correctly.
 }
 \details{
   The \code{operations()} query returns a JSON object describing the
@@ -189,7 +219,7 @@
     madison("Billy", "Eric")
 
     ## operations() returns JSON object listing the accessible functionality
-    if (require(jsonline)) print(fromJSON(operations()))
+    if (require(jsonlite)) print(fromJSON(operations()))
 
 }
 }
